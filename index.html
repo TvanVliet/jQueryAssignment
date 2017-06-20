@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic page 1</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+<body>
+    <h1>Guinea Pigster</h1>
+    <p>Hey</p>
+<div id ="clickit">
+    <h2>Click here</h2>
+</div>
+<div id = "list">
+    <ul>
+	   <li>Below</li>
+	   <li>Rests</li>
+	   <li>The Pigster</li>
+    </ul>
+</div>
+<div id = "reveal">
+    <h3>Reveal The Pigster</h3>
+</div>
+    <img id = "pigster" src="https://i.ytimg.com/vi/lGcZ8sdxKmc/maxresdefault.jpg" width="50%" height="50%" />
+    <p>Hello</p>
+<script src="http://code.jquery.com/jquery-3.1.0.min.js"></script>
+        <script>
+            $( document ).ready( function(  ) {
+            	$ ('h1').mouseenter( function() {
+            		$(this).fadeOut(300);
+            		$(this).fadeIn(500);
+            	})		
+                $('p').slideUp( 300 ).delay( 800 ).fadeIn( 400 );
+                $('#list').hide();
+            	$ ('#clickit').click(function() {
+            		alert("Beware of the Pigster");
+                    $('#list').slideToggle('fast', function() {
+                    })
+            	} )
+                $('#pigster').hide();
+                $ ('#reveal').click(function() {
+                    $('#pigster').slideToggle('slow', function() {
+                    })
+                })
+            } );
+        </script>
+</body>
+</html>
+
+
+<!-- Create a basic html page without any CSS styling to it, the page should have at least 10 elements on it.
+
+Use jQuery to animate the elements, you can for instance use hide(), show(),fadeIn(),fadeOut(),slideToggle()...etc. You should have at least 5 different effects happen.
+
+You must also have at least 3 different events handlers as well (you can choose for instance click,hover and mouseEnter but you're free to use others if you want). -->
